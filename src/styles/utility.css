@@ -1,0 +1,63 @@
+.h-center {
+    margin-inline: auto;
+}
+
+.text-small {
+    font-size: small;
+}
+
+.text-large {
+    font-size: large;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.underline {
+    text-decoration: underline;
+}
+/* Margins */
+.mt-small {
+    margin-top: 1.5rem;
+    width: 150px;
+    height: 20px;
+}
+.mt-medium {
+    margin-top: 2rem;
+}
+.mt-large {
+    margin-top: 3.5rem;
+}
+.mt-xlarge {
+    margin-top: 4rem;
+}
+.mb-small {
+    margin-bottom: 1.5rem;
+}
+.mb-medium {
+    margin-bottom: 2rem;
+}
+.mb-large {
+    margin-bottom: 3.5rem;
+}
+.mb-xlarge {
+    margin-bottom: 4rem;
+}
+.small-padding-medium {
+    padding-left: 20px;
+}
+.small-padding {
+    padding: 5%;
+}
+/* Used for all major headings */
+.major-heading {
+    color: var(--major-head-color);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+

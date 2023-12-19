@@ -1,0 +1,132 @@
+---
+const userTime = new Date();
+const sideNavLinksGlobal = await Astro.glob('/src/md/nav/sidenav/global/*.md');
+const sortedSideNavLinksGlobal = sideNavLinksGlobal.sort((a, b) => 
+    a.frontmatter.linkname.localeCompare(b.frontmatter.linkname)
+);
+
+const sideNavLinksServices = await Astro.glob('/src/md/nav/sidenav/services/*.md');
+const sortedSideNavLinksServices = sideNavLinksServices.sort((a, b) => 
+    a.frontmatter.linkname.localeCompare(b.frontmatter.linkname)
+);
+---
+<div class="side-nav-container">
+    <div class="side-nav">
+        <a id="logo" href="/"><img src="/public/logo.svg" alt="Ancient Civilzations Logo"/></a>
+        <p id="date" class="h-center side-nav-times">{userTime.toLocaleDateString()}</p>
+        <p id="time" class="h-center side-nav-times">{userTime.toLocaleTimeString()}</p>
+        
+        <p class="small-padding-medium side-nav-category">Global Links</p>
+        <ul class="h-center">
+            {sortedSideNavLinksGlobal.map((link) => {
+                return (
+                <a href={link.frontmatter.href} class="side-nav-button"><li class="side-nav-item">{link.frontmatter.linkname}</li></a>
+                );
+            })}
+        </ul>
+        <p class="small-padding-medium side-nav-category">Services</p>
+        <ul class="h-center">
+            {sortedSideNavLinksServices.map((link) => {
+                return (
+                <a href={link.frontmatter.href} class="side-nav-button"><li class="side-nav-item">{link.frontmatter.linkname}</li></a>
+                );
+            })}
+        </ul>    
+    </div>
+</div>
+<style>
+    #logo {
+        margin-inline: auto;
+        height: 136px;
+        width: 136px;
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /*-------SIDE NAV CONTAINER--------*/
+    .side-nav-container {
+        display: flex;
+        height: 100%;
+        flex: 0 0 200px;
+    }
+    .side-nav {
+        color: var(--main-text-color);
+        background-color: var(--sidenav-background-color);
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+        flex: 0 0 220px;
+    }
+
+    .side-nav-times {
+        color: var(--major-head-color);
+    }
+    .side-nav-category {
+        color: var(--main-link-color);
+    }
+    /*-------------------SIDE NAV BUTTONS---------------------*/
+    .side-nav-button {
+        border-bottom: 1px solid var(--main-link-color);
+        padding: 6% 0 6% 0;
+    }
+    .side-nav-button::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: var(--main-link-color);
+        left: 25px;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .side-nav-button:hover::before {
+        content: "";
+        width: 27px; 
+        height: 27px; 
+        background: 
+            radial-gradient(circle closest-side, #000 93%, transparent 71%),
+            linear-gradient(135deg, hsl(291, 100%, 67%), hsl(180, 94%, 56%));
+        border-radius: 50%;
+        left: 24px; 
+        position: absolute;
+    }
+    .side-nav-button:hover {
+        padding: 1rem !important;
+        width: 100% !important;
+        list-style-type: none !important;
+        background: radial-gradient(50% 183.93% at 50% -83.93%, hsl(180, 94%, 56%) 0%, rgba(21, 222, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, transparent, rgba(255, 255, 255, 0) 100%) !important;
+        background-blend-mode: normal, overlay !important;
+        background-position-y: bottom !important;
+    }
+    .side-nav-item {
+        width: 40%;
+        border-radius: 5px;
+        list-style-type: none;
+        text-align: center;
+        background-color: var(--nav-background-color);
+        margin-inline: auto;
+        font-size: small;
+        color: #FFFFFF;
+    }
+/* Existing CSS here... */
+
+/* Media Query for devices with width up to 768px (typical breakpoint for tablets) */
+@media only screen and (max-width: 900px) {
+    .side-nav {
+        width: 25%;
+    }
+
+}
+
+/* Media Query for even smaller devices, e.g. mobile phones */
+@media only screen and (max-width: 480px) {
+    .side-nav {
+        width: 55%;
+    }
+}
+
+/*-----Component created and styled by Cade Schmidt-------*/
+</style>
+
+

@@ -1,0 +1,86 @@
+---
+
+import SideNav from "../components/sideNav.astro";
+import TopNav from "../components/topNav.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/utility.css" />
+    <link rel="stylesheet" type="text/css" href="/css/template.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="master-container">
+      <SideNav />
+      <div class="page-content-container">
+        <TopNav />
+        <div class="content-container mt-xlarge" style="display: flex;">
+          <h2 class="major-heading">Register</h2>
+          <!-- 
+ * This file represents the registration page of the application.
+ * It contains a form for users to register with their email, family name, password, and confirm password.
+ * The form also includes a dropdown menu for selecting the family name.
+  * If the user is already registered, they can navigate to the login page using the provided link.
+				-->
+          <form class="mtop-large mb-large flex-column reg-form h-center">
+            <label for="email"><span class="alert">*</span>Email:</label>
+            <input type="text" name="email" required class="center-input" />
+            <script type="module" src="/familyNameDropdown.js"></script>
+            
+
+            <label for="uname"><span class="alert">*</span>Family Name:</label>
+            <select
+              id="familyName"
+              name="familyName"
+              required
+              class="center-input"
+              style="width: 150px; height:25px;"></select>
+
+            <label for="pass"><span class="alert">*</span>Password:</label>
+            <input type="password" name="pass" required class="center-input" />
+            <label for="pass2"
+              ><span class="alert">*</span>Confirm Password:</label
+            >
+            <input type="password" name="pass2" required class="center-input" />
+
+            <button class="mt-small btn-small" onclick="funnyJoke()"
+              >Submit</button
+            >
+            <h4 class="major-heading">Already registered?</h4>
+            <p>You can log in <a href="login"> here</a>.</p>
+          </form>
+<!--  /*------------------------------------------------------------------------------*	-->
+        </div>
+      </div>
+    </div>
+<!-- This script loads the dropdown menu when called in the registration form -->
+	<script>
+		import { populateFamilyNameDropdown } from "../scripts/familyNameDropdown";
+
+		console.log("Setting up event listener");
+		document.addEventListener("DOMContentLoaded", function () {
+		  console.log("DOMContentLoaded event fired");
+		  populateFamilyNameDropdown("familyName");
+		});
+	  </script>
+  </body>
+  <style>
+    .reg-form {
+      display: flexbox;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+    }
+    .reg-form input {
+      width: 150px;
+      height: 25px;
+      margin: 5px;
+    }
+  </style>
+</html>

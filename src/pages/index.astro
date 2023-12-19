@@ -1,0 +1,78 @@
+---
+import SideNav from '../components/sideNav.astro';
+import TopNav from '../components/topNav.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" type="text/css" href="/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="/css/utility.css" />
+		<link rel="stylesheet" type="text/css" href="/css/template.css" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="master-container">
+			<SideNav />
+			<div class="page-content-container">
+				<TopNav />
+				<div class="content-container mt-xlarge" style="display: flex;">
+					<h2 class="major-heading">Welcome to Ancient Civilzations.</h2>
+					<p class="">A website that focuses on... [description here]</p>
+				</div>
+				
+				<div class="content-container mt-xlarge" style="display: flex;">
+					<h2 class="major-heading">Our mission.</h2>
+					<p class="">We're here to provide a unique forum experience, imagine our service as a social media that has a ancient history twist. </p>
+				</div>
+			</div>
+			
+		</div>
+		
+		/********************************************************************************************************* */
+	
+	
+	
+	
+	
+	</body>
+
+
+
+
+
+
+
+
+	
+	/**
+	 * This is the CSS style block for the index page.
+	 * It defines the styles for the body, page content container, content container, and master container.
+	 */
+	<style>
+		body {
+			max-width: 100vw;
+			height: 100vh;
+			width: 100vw;
+		}
+		.page-content-container {
+			background-color: var(--background-color);
+			flex: 1;
+		}
+		.content-container {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			background-color: var(--content-grey);
+			width: 50%;
+			margin-inline: auto;
+			border-radius: 10px;
+		}
+		.master-container {
+			display: flex;
+			height: 100%;
+		}
+	</style>
+</html>

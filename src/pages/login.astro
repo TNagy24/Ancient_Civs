@@ -1,0 +1,62 @@
+---
+import SideNav from '../components/sideNav.astro';
+import TopNav from '../components/topNav.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" type="text/css" href="/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="/css/utility.css" />
+		<link rel="stylesheet" type="text/css" href="/css/template.css" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="master-container">
+			<SideNav />
+			<div class="page-content-container">
+				<TopNav />
+				<div class="content-container mt-xlarge" style="display: flex;">
+					<h2 class="major-heading">Login</h2>
+					<p>A multi-factor email will be sent to you to facilitate your login process.</p>
+                    <form class="mtop-large mb-large flex-column reg-form h-center">
+                        <label for="email"><span class="alert">*</span>Email:</label>
+                        <input type="text" name="email" required class="center-input">
+						<label for="password"><span class="alert">*</span>Password:</label>
+						<input type="password" name="password" required class="center-input">
+                        <button  class="mt-small btn-small" onclick="funnyJoke()">Submit</button>
+						<h4 class="major-heading">Not registered?</h1>
+						<p>You can register <a href="register"> here</a>.</p>
+
+                    </form>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+<script is:inline>
+	/* let ranNum = Math.random() * 20000;
+	function funnyJoke() { 
+		alert("Congratulations you've been signed up for " ranNum + " different newsletters");
+		} */
+</script>
+	</body>
+	<style>
+		.reg-form {
+			display: flexblock;
+    		flex-direction: column;
+    		align-items: center;
+    		text-align: center;
+			
+
+        }
+        .reg-form input {
+            width: 150px;
+            height: 25px;
+			margin: 5px;
+        }
+	</style>
+</html>

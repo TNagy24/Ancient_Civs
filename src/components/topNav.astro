@@ -1,0 +1,406 @@
+---
+const navLinks = await Astro.glob('/src/md/nav/topnav/civs/*.md');
+const sortedNavLinks = navLinks.sort((a, b) => 
+    a.frontmatter.linkname.localeCompare(b.frontmatter.linkname)
+);
+---
+    <div class="top-nav">
+        <div class="top-bar">
+            <div class="user-info">
+                <img id="userPic" src="/images/owner.png" alt="User Image" class="user-img"/>
+                <div class="flex-column">
+                <div id="userButtons" class="flex-row">
+                    <a id="button1" class="top-nav-user-button button-style">Sign Out</a>
+                    <a id="button2" class="top-nav-user-button button-style">Subscribe</a>
+                </div>
+                
+                <div class="user-text flex-row">
+                    <p>You are signed in as, <br/><span class="username">[Name]</span></p>
+                </div>
+            </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="" class="search-bar-box">
+                <button class="search-btn">Q</button>
+            </div>
+            <div class="notifications">
+                <div class="notif">
+                    <img src="/images/messageicon.svg" alt="User Image" class="icon"/>
+                    <p class="notif-count">7</p>
+                    
+                </div>
+                <div class="notif">
+                    <img src="/images/notificon.svg" alt="User Image" class="icon"/>
+                    <p class="notif-count">3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="nav-bar-links">
+                {sortedNavLinks.map((link) => {
+                     return (
+                    <a href={link.frontmatter.href} class="button-style"><p class="text-index">{link.frontmatter.linkname}</p></a>
+                    );
+                })}
+              
+                   
+                
+
+            </div>
+            <div class="nav-bar-crumb paddingtop1rem">
+                <div class="breadcrumb">Ancient Civs > Near Eastern</div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        let loggedIn = false;
+        let signInButton = document.createElement('a');
+        let signUpButton = document.createElement('a');
+        let signOutButton = document.createElement('a');
+        let subscribeButton = document.createElement('a');
+        let userButtonsContainer = document.getElementById('userButtons');
+    
+        let userPic = document.getElementById('userPic');
+        let button1 = document.getElementById('button1');
+        let button2 = document.getElementById('button2');
+        if (loggedIn) {
+            button1.innerText = 'Sign Out';
+            button2.innerText = 'Subscribe';
+        } else {
+            button1.innerText = 'Sign Up';
+            button1.setAttribute('href', '/register');
+            button2.innerText = 'Sign In';
+            button2.setAttribute('href', '/login');
+            userPic.setAttribute('src', '/images/default.png');
+        }
+    
+        /* 
+        future use
+        if (loggedIn) {
+            signOutButton.setAttribute('class', 'top-nav-user-button button-style'); 
+            signOutButton.innerText = 'Sign Out';
+            subscribeButton.setAttribute('class', 'top-nav-user-button button-style');
+            subscribeButton.innerText = 'Subscribe';
+            userButtonsContainer.appendChild(signOutButton);
+            userButtonsContainer.appendChild(subscribeButton);
+        } else {
+            signUpButton.setAttribute('class', 'top-nav-user-button button-style');
+            signUpButton.innerText = 'Sign Up';
+            signInButton.setAttribute('class', 'top-nav-user-button button-style');
+            signInButton.innerText = 'Sign In';
+            userButtonsContainer.appendChild(signUpButton);
+            userButtonsContainer.appendChild(signInButton);
+        } */
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const navLinksContainer = document.querySelector('.nav-bar-links');
+    
+    navLinksContainer.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+    console.log("worx " + vw)
+
+});
+    </script>
+
+		<style>
+
+.top-nav {
+    background-color: #1a1a1a;
+    margin: 0;
+    height: 200px;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+
+}
+.text-index {
+    z-index: 10;
+}
+.user-info {
+    display: flex;
+
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.user-img {
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.search-bar-box {
+    background-color: var(--dark-purple);
+}
+
+.top-nav-user-button {
+    background-color: var(--dark-purple);
+    color: white;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+}
+.flex-row {
+    display: flex;
+    z-index: 1;
+}
+.username {
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 30px;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+    height: 100%;
+}
+
+.search-btn {
+    background-color: var(--dark-purple);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+    border: 1px var(--dark-purple) solid;
+    border-radius: 50%;
+}
+.notif {
+    display: flex;
+
+}
+.notifications {
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.notif-count {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    background-color: grey;
+}
+.paddingtop1rem {
+    padding-top: 1rem;
+}
+.nav-bar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+}
+
+.button-style {
+  position: relative;
+  background-color: black;
+  color: #FFFFFF;
+  padding: 5px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
+ /* This is to clip the pseudo-element if it bleeds out of the border-radius */
+ /* This ensures that the button text is above the pseudo-element */
+}
+
+.button-style::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -1; /* This puts the pseudo-element behind the button content */
+
+  /* Create the gradient background */
+  background: 
+   linear-gradient(hsl(291, 100%, 67%), hsl(180, 94%, 56%));
+  background-size: auto auto;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+
+  /* Make sure the border-radius matches the button-style border-radius */
+  border-radius: 17px; /* 2 pixels more to accommodate the border size */
+}
+ .button-style:hover {
+    position: relative;
+    background-color: black;
+        list-style-type: none ;
+        background: radial-gradient(50% 183.93% at 50% -83.93%, hsl(291, 100%, 67%) 0%, rgba(21, 222, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, transparent, rgba(255, 255, 255, 0) 100%) !important;
+        background-blend-mode: normal, overlay ;
+        background-position-y: bottom ;
+          position: relative;
+  background-color: black;
+  color: #FFFFFF;
+  padding: 5px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
+  z-index: 1;
+ }
+
+ .button-style:hover::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  z-index: -1; /* This puts the pseudo-element behind the button content */
+  /* Create the gradient background */
+  background: 
+   linear-gradient(hsl(291, 100%, 67%), hsl(180, 94%, 56%));
+  background-size: auto auto;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+
+  /* Make sure the border-radius matches the button-style border-radius */
+  border-radius: 17px; /* 2 pixels more to accommodate the border size */
+}
+
+.button-style:hover::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: -1; /* This puts the pseudo-element behind the button content */
+  /* Create the gradient background */
+  background: 
+   black;
+  background-size: auto auto;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+
+  /* Make sure the border-radius matches the button-style border-radius */
+  border-radius: 17px; /* 2 pixels more to accommodate the border size */
+}
+
+.breadcrumb {
+    font-style: italic;
+    color: #aaa;
+}
+
+@media only screen and (max-width: 900px) {
+
+
+}
+
+/* Media Query for even smaller devices, e.g. mobile phones */
+/* Media Query for mobile devices */
+@media only screen and (max-width: 500px) {
+    .nav-bar-links {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-bar-links a {
+        display: none;
+    }
+
+    .nav-bar-links::after {
+        content: 'Menu';
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: var(--dark-purple);
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-bar-links.active::after {
+        content: 'Close';
+    }
+
+    .nav-bar-links.active a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+    }
+
+
+.button-style {
+    width: 70%;
+    background-color: grey;
+    border-radius: 0;
+}
+
+.button-style::before {
+    background-color: black;
+    width: 50%;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    background: black;
+}
+
+.master-container {
+    width: 100%;
+}
+.page-content-container {
+    width: 100%;
+}
+.side-nav {
+    display: none;
+}
+}
+		</style>

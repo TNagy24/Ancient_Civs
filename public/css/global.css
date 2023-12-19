@@ -1,0 +1,72 @@
+:root {  
+    --main-link-color: hsl(183, 82%, 55%);  
+    --main-text-color: hsl(0, 0%, 90%); 
+    --major-head-color: hsl(47, 89%, 78%);
+    --head-color: hsl(291, 100, 67, 100%); 
+    --background-color: hsl(0, 0%, 0%); 
+    --nav-background-color: hsl(186, 46%, 21%);
+    --sidenav-background-color: hsl(0, 0%, 4%);
+    --card-background-color: hsl(0, 0%, 13%); 
+    --alert-color: hsl(0, 100%, 36%); 
+    --minor-head-color: hsl(291, 83%, 78%); 
+    --toolbar-color: hsl(0, 0, 7, 100%); 
+    ---gradient: linear-gradient(hsl(, 89%, 78%), hsl(291, 100, 67%));
+    --purp-gradient: linear-gradient(hsl(291, 100%, 67%), hsl(180, 94%, 56%)); /* Gradient used on all cards */
+    --font-body: 'Nunito', sans-serif;
+    --font-heading: 'Playfair Display SC', serif;
+    --dark-purple: hsl(291, 100%, 10%);
+    --content-grey: hsl(0, 0%, 13%);
+
+    /*additions  */
+    --GradientTeal: linear-gradient(#202020, #202020);
+    --gradientColor: radial-gradient(hsl(188, 100%, 54%), hsl(188, 100%, 54%));
+
+  } /* UP change grad to HSL */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Playfair+Display&family=Playfair+Display+SC&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--main-text-color);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--major-head-color);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--main-link-color);
+  }
+
+  a:hover, a:active {
+    color: var(--major-head-color);
+  }
