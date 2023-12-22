@@ -1,211 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Navigation Bar</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="top-nav">
-        <div class="top-bar">
-            <div class="user-info">
-                <img src="owner.png" alt="User Image" class="user-img"/>
-                <div class="flex-column">
-                <div class="flex-row">
-                    <a class="top-nav-user-button button-style">Sign Out</a>
-                    <a class="top-nav-user-button button-style">Subscribe</a>
-                </div>
-                
-                <div class="user-text flex-row">
-                    <p>You are signed in as, <br/><span class="username">[Name]</span></p>
-                </div>
+      <div class="top-bar">
+        <div class="user-info">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/a3d5/5042/a77ff54b8396b8b202c509e5cef9a05f?Expires=1704067200&Signature=iC7A5x3rWNotXSIx5T9f2cRptG36YLdhIFSi6~rANkHu3IRWhVKleTC7otLmTgs~xcY0MFJDwQs9xHc9gyP9korzb74USW82eOaUKi8M09NaeJ2ZzlOzVjS4f6ZGsWdixaoOStYkCvHmdYpfG7wHhplETEsTaiSKADe4Hwsfguez9HBB86KMEV-1cJwyRG8wI1D8rkIzbSeQPUV99SgUx22-dcJahsTRBaIBAibW9H5zrEVlNGKfG7rfPvAaEuIjdCcWwmKWvskVFgK~pFeI4q7VPg2cVv4tNtWn2lgE5KYf~uGQEz~WyC6lz2IfbD3vQtWVxb9S926xMm~aksFEow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="User Image"
+            class="user-img"
+          />
+          <div class="flex-column">
+            <div class="flex-row">
+              <a class="top-nav-user-button button-style">Sign Out</a>
+              <a class="top-nav-user-button button-style">Subscribe</a>
             </div>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="" class="search-bar-box">
-                <button class="search-btn">Q</button>
-            </div>
-            <div class="notifications">
-                <div class="notif">
-                    <img src="messageicon.svg" alt="User Image" class="icon"/>
-                    <p class="notif-count">7</p>
-                    
-                </div>
-                <div class="notif">
-                    <img src="notificon.svg" alt="User Image" class="icon"/>
-                    <p class="notif-count">3</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="nav-bar">
-            <div class="nav-bar-links">
-                <a class="button-style">American</a>
-                <a class="button-style">Asian</a>
-                <a class="button-style">Celtic</a>
-                <a class="button-style">American</a>
-                <a class="button-style">Asian</a>
-                <a class="button-style">Celtic</a>
-                <a class="button-style">American</a>
-                <a class="button-style">Asian</a>
-                <a class="button-style">Celtic</a>
-                <a class="button-style">Celtic</a>
+            <div class="user-text flex-row">
+              <p>
+                You are signed in as, <br /><span class="username">[Name]</span>
+              </p>
             </div>
-            <div class="nav-bar-crumb paddingtop1rem">
-                <div class="breadcrumb">Ancient Civs > Near Eastern</div>
-            </div>
+          </div>
         </div>
+        <div class="search-bar">
+          <input type="text" placeholder="" class="search-bar-box" />
+          <button class="search-btn">Q</button>
+        </div>
+        <div class="notifications">
+          <div class="notif">
+            <img src="messageicon.svg" alt="User Image" class="icon" />
+            <p class="notif-count">7</p>
+          </div>
+          <div class="notif">
+            <img src="notificon.svg" alt="User Image" class="icon" />
+            <p class="notif-count">3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-bar-links">
+          <a class="button-style">American</a>
+          <a class="button-style">Asian</a>
+          <a class="button-style">Celtic</a>
+          <a class="button-style">American</a>
+          <a class="button-style">Asian</a>
+          <a class="button-style">Celtic</a>
+          <a class="button-style">American</a>
+          <a class="button-style">Asian</a>
+          <a class="button-style">Celtic</a>
+          <a class="button-style">Celtic</a>
+        </div>
+        <div class="nav-bar-crumb paddingtop1rem">
+          <div class="breadcrumb">Ancient Civs > Near Eastern</div>
+        </div>
+      </div>
     </div>
-		<style>
-		body {
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
-}
-.top-nav {
-    background-color: #1a1a1a;
-}
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #000816;
+        color: white;
+        margin: 0;
+      }
+      .top-nav {
+        background: #000816;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
 
-.user-info {
-    display: flex;
+      .user-info {
+        display: flex;
 
-    align-items: center;
-}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-.user-img {
-    width: 90px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
+        align-items: center;
+      }
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+      }
+      .user-img {
+        width: 90px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
 
-.user-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.search-bar-box {
-    background-color: magenta;
-}
+      .user-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-bar-box {
+        background: #000816;
+      }
 
-.top-nav-user-button {
-    background-color: purple;
-    color: white;
-    border: none;
-    height: 20px;
-    cursor: pointer;
-}
-.flex-row {
-    display: flex;
-}
-.username {
-    font-weight: bold;
-}
+      .top-nav-user-button {
+        display: flex;
+        height: 35px;
+        padding: 4px 10px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid #ffdc5f;
+        background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+      }
+      .flex-row {
+        display: flex;
+      }
+      .username {
+        font-weight: bold;
+      }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    height: 30px;
-}
+      .search-bar {
+        border-radius: 20px;
+        border: 1px solid var(--brand-gradient-gold, #ccb04c);
+      }
 
-.search-bar input {
-    padding: 5px;
-    width: 80%;
-    border-radius: 5px;
-    border: none;
-    margin-right: 5px;
-    height: 100%;
-}
+      .search-bar input {
+        padding: 5px;
+        width: 80%;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+        height: 100%;
+      }
 
-.search-btn {
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
+      .search-btn {
+        background: #000816;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
-.icon {
-    height: 35px;
-    width: 35px;
-    padding: 5px;
-    border: 1px orange solid;
-    border-radius: 50%;
-}
-.notif {
-    display: flex;
+      .icon {
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+        border: 1px orange solid;
+        border-radius: 50%;
+      }
+      .notif {
+        display: flex;
+      }
+      .notifications {
+        display: flex;
+        align-items: center;
+        margin-bottom: auto;
+      }
 
-}
-.notifications {
-    display: flex;
-    align-items: center;
-    margin-bottom: auto;
-}
+      .notif-count {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        cursor: pointer;
+      }
 
-.notif-count {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    cursor: pointer;
-}
+      .nav-bar {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        background-color: grey;
+      }
+      .paddingtop1rem {
+        padding-top: 1rem;
+      }
+      .nav-bar-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+      }
 
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    background-color: grey;
-}
-.paddingtop1rem {
-    padding-top: 1rem;
-}
-.nav-bar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 30px;
-}
+      .button-style {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 15px;
+        margin: 5px;
+        cursor: pointer;
+        align-content: center;
+        margin: auto;
+      }
 
-.button-style {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 15px;
-    margin: 5px;
-    cursor: pointer;
-    align-content: center;
-    margin: auto;
-    
- }
-
-.breadcrumb {
-    font-style: italic;
-    color: #aaa;
-}
-
-		</style>
-</body>
+      .breadcrumb {
+        font-style: italic;
+        color: #aaa;
+      }
+    </style>
+  </body>
 </html>
