@@ -50,9 +50,6 @@ body {
 .flex-row {
   display: flex;
 }
-.username {
-  font-weight: bold;
-}
 
 .icon {
   height: 35px;
