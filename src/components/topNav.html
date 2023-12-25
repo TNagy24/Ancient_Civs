@@ -10,11 +10,9 @@
     <div class="top-nav">
       <div class="top-bar">
         <div class="user-info">
-          <img
-            src="https://s3-alpha-sig.figma.com/img/a3d5/5042/a77ff54b8396b8b202c509e5cef9a05f?Expires=1704067200&Signature=iC7A5x3rWNotXSIx5T9f2cRptG36YLdhIFSi6~rANkHu3IRWhVKleTC7otLmTgs~xcY0MFJDwQs9xHc9gyP9korzb74USW82eOaUKi8M09NaeJ2ZzlOzVjS4f6ZGsWdixaoOStYkCvHmdYpfG7wHhplETEsTaiSKADe4Hwsfguez9HBB86KMEV-1cJwyRG8wI1D8rkIzbSeQPUV99SgUx22-dcJahsTRBaIBAibW9H5zrEVlNGKfG7rfPvAaEuIjdCcWwmKWvskVFgK~pFeI4q7VPg2cVv4tNtWn2lgE5KYf~uGQEz~WyC6lz2IfbD3vQtWVxb9S926xMm~aksFEow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt="User Image"
-            class="user-img"
-          />
+          <div class="user-img">
+            <img src="Message Icon.png" alt="User Image" />
+          </div>
           <div class="flex-column">
             <div class="flex-row">
               <a class="top-nav-user-button button-style">Sign Out</a>
@@ -30,7 +28,9 @@
         </div>
         <div class="search-bar">
           <input type="text" placeholder="" class="search-bar-box" />
-          <button class="search-btn">Q</button>
+          <button class="search-btn">
+            <img src="Search.png" alt="" />
+          </button>
         </div>
         <div class="notifications">
           <div class="notif">
@@ -49,13 +49,13 @@
           <a class="button-style">American</a>
           <a class="button-style">Asian</a>
           <a class="button-style">Celtic</a>
-          <a class="button-style">American</a>
-          <a class="button-style">Asian</a>
-          <a class="button-style">Celtic</a>
-          <a class="button-style">American</a>
-          <a class="button-style">Asian</a>
-          <a class="button-style">Celtic</a>
-          <a class="button-style">Celtic</a>
+          <a class="button-style">Egyptian</a>
+          <a class="button-style">Germanic</a>
+          <a class="button-style">Greek</a>
+          <a class="button-style">Near Eastern</a>
+          <a class="button-style">Oceanic</a>
+          <a class="button-style">Prehistoric</a>
+          <a class="button-style">Roman</a>
         </div>
         <div class="nav-bar-crumb paddingtop1rem">
           <div class="breadcrumb">Ancient Civs > Near Eastern</div>
@@ -87,51 +87,70 @@
       .flex-column {
         display: flex;
         flex-direction: column;
+        margin-top: 20px;
       }
       .user-img {
+        margin-top: -80px;
         width: 90px;
         border-radius: 50%;
         margin-right: 10px;
       }
 
-      .user-text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
       .search-bar-box {
         background: #000816;
       }
 
       .top-nav-user-button {
-        display: flex;
-        height: 35px;
-        padding: 4px 10px;
-        align-items: center;
-        gap: 10px;
+        margin-top: 100px;
         border-radius: 8px;
         border: 1px solid #ffdc5f;
         background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
       }
       .flex-row {
         display: flex;
+        height: 35px;
+        padding: 4px 18px;
+        align-items: center;
+        gap: 10px;
       }
+
+      .user-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 60px;
+        margin-left: -118px;
+        color: var(--brand-brand-whiteyellow, #fffdf0);
+        font-family: Nunito Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
       .username {
-        font-weight: bold;
+        color: #94e8ec;
+        font-family: Nunito Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
       }
 
       .search-bar {
+        width: 442px;
+        height: 56px;
+        flex-shrink: 0;
         border-radius: 20px;
         border: 1px solid var(--brand-gradient-gold, #ccb04c);
       }
 
       .search-bar input {
-        padding: 5px;
-        width: 80%;
-        border-radius: 5px;
-        border: none;
-        margin-right: 5px;
-        height: 100%;
+        width: 442px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        border: 1px solid var(--brand-gradient-gold, #ccb04c);
       }
 
       .search-btn {
@@ -139,8 +158,10 @@
         color: white;
         border: none;
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
+        width: 18px;
+        height: 17.85px;
+        margin-left: 400px;
+        margin-top: -30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -177,33 +198,50 @@
         cursor: pointer;
       }
 
+      .paddingtop1rem {
+        padding-top: 1rem;
+      }
+
+      .button-style {
+        color: #001840;
+        border-radius: 8px;
+        border: 1px solid #ffdc5f;
+        background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
+        padding: 5px 15px;
+        margin: 5px;
+        cursor: pointer;
+        align-content: center;
+        margin: auto;
+      }
+
       .nav-bar {
         display: flex;
         flex-direction: column;
         padding: 10px 20px;
-        background-color: grey;
+        background: #000816;
       }
-      .paddingtop1rem {
-        padding-top: 1rem;
-      }
+
       .nav-bar-links {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         width: 100%;
         height: 30px;
       }
 
-      .button-style {
-        background-color: black;
-        color: white;
-        border: none;
-        padding: 5px 15px;
-        border-radius: 15px;
-        margin: 5px;
-        cursor: pointer;
-        align-content: center;
-        margin: auto;
+      .nav-bar-links .button-style {
+        display: flex;
+        width: 100px;
+        height: 35px;
+        padding: 4px 10px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 1px solid #fffae7;
+        color: #cbd0d8;
+        background: linear-gradient(180deg, #333d51 0%, #000e26 100%);
       }
 
       .breadcrumb {
