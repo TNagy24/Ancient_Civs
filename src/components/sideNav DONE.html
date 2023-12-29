@@ -1,119 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<link href="/src/styles/utility.css" type="text/css" rel="stylesheet"/>
-<link href="/src/styles/global.css" type="text/css" rel="stylesheet"/>
-</head>
-<body>
-<div class="side-nav">
-    <a id="logo" href="/src/pages/index.astro"><img src="/public/logo.svg" alt="Ancient Civilzations Logo"/></a>
-    <p id="date" class="h-center side-nav-times"></p>
-    <p id="time" class="h-center side-nav-times"></p>
-    
-    <p class="small-padding side-nav-category">Global Links</p>
-    <ul class="h-center">
-        <a class="side-nav-button"><li class="side-nav-item">Bulletins</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Gazette</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Boards</li></a>
-    </ul>
-    <p class="small-padding side-nav-category">Services</p>
-    <ul class="h-center">
-        <a class="side-nav-button"><li class="side-nav-item">Subscribe</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Site Rules</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">FAQ/Help</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Shop</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Contact</li></a>
-        <a class="side-nav-button"><li class="side-nav-item">Market Place</li></a>
-    </ul>    
-</div>
-<script>   
-    const userTime = new Date()
-    let dateElement = document.getElementById('date');
-    let timeElement = document.getElementById('time');
-    dateElement.innerHTML = userTime.toLocaleDateString();
-    timeElement.innerHTML = userTime.toLocaleTimeString();
-</script>
-</body>
-<style>
+  <head>
+    <link href="/src/styles/utility.css" type="text/css" rel="stylesheet" />
+    <link href="/src/styles/global.css" type="text/css" rel="stylesheet" />
+    <title>Side Nav</title>
+  </head>
+  <body>
+    <script>
+      const userTime = new Date();
+      let dateElement = document.getElementById("date");
+      let timeElement = document.getElementById("time");
+      dateElement.innerHTML = userTime.toLocaleDateString();
+      timeElement.innerHTML = userTime.toLocaleTimeString();
+    </script>
+  </body>
+  <style>
     .side-nav {
-        color: var(--main-text-color);
-        background-color: var(--background-color);
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        border: 2px solid;
+      color: var(--main-text-color);
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      border: 2px solid;
     }
     .side-nav-item {
-        width: 40%;
-        border-radius: 5px;
-        list-style-type: none;
-        text-align: center;
-        background-color: var(--nav-background-color);
-        margin-inline: auto;
-        font-size: small;
+      width: 40%;
+      border-radius: 5px;
+      list-style-type: none;
+      text-align: center;
+      background-color: var(--nav-background-color);
+      margin-inline: auto;
+      font-size: small;
     }
 
     .side-nav-button::before {
-        content: "";
-        width: 25px;
-        height: 25px;
-        background-color: var(--main-link-color);
-        left: 25px;
-        border-radius: 50%;
-        position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-color: var(--main-link-color);
+      left: 25px;
+      border-radius: 50%;
+      position: absolute;
     }
     .side-nav-button:hover::before {
-        content: "";
-    width: 27px; /* To account for the gradient border width */
-    height: 27px; /* To account for the gradient border width */
-    background: 
-        radial-gradient(circle closest-side, #000 93%, transparent 71%),
+      content: "";
+      width: 27px; /* To account for the gradient border width */
+      height: 27px; /* To account for the gradient border width */
+      background: radial-gradient(
+          circle closest-side,
+          #000 93%,
+          transparent 71%
+        ),
         linear-gradient(135deg, hsl(291, 100%, 67%), hsl(180, 94%, 56%));
-    border-radius: 50%;
-    left: 24px; /* Adjusted to center the circle */
-    position: absolute;
+      border-radius: 50%;
+      left: 24px; /* Adjusted to center the circle */
+      position: absolute;
     }
 
     .side-nav-button {
-        border-bottom: 1px solid var(--main-link-color);
-        padding: 6% 0 6% 0;
+      border-bottom: 1px solid var(--main-link-color);
+      padding: 6% 0 6% 0;
     }
     .side-nav-button:hover {
-
-
-background: var(--gradientColor);
-padding: 1rem !important;
-  width: 100% !important;
-  list-style-type: none !important;
-  background: radial-gradient(50% 183.93% at 50% -83.93%, #15deff 0%, rgba(21, 222, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, transparent, rgba(255, 255, 255, 0) 100%) !important;
-  background-blend-mode: normal, overlay !important;
-  background-position-y: bottom !important;
+      background: var(--gradientColor);
+      padding: 1rem !important;
+      width: 100% !important;
+      list-style-type: none !important;
+      background: radial-gradient(
+          50% 183.93% at 50% -83.93%,
+          #15deff 0%,
+          rgba(21, 222, 255, 0) 100%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          transparent,
+          rgba(255, 255, 255, 0) 100%
+        ) !important;
+      background-blend-mode: normal, overlay !important;
+      background-position-y: bottom !important;
     }
 
     ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
     }
     a {
-        color: #FFFFFF;
+      color: #ffffff;
     }
 
     .side-nav-times {
-        color: var(--major-head-color);
+      color: var(--major-head-color);
     }
     .side-nav-category {
-        color: var(--main-link-color);
-        
+      color: var(--main-link-color);
     }
 
     #logo {
-        margin-inline: auto;
-        height: 136px;
-        width: 136px;
+      margin-inline: auto;
+      height: 136px;
+      width: 136px;
     }
-    
-</style>
+  </style>
 </html>
-
-

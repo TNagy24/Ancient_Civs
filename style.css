@@ -3,9 +3,7 @@ body {
   color: white;
   margin: 0;
 }
-.top-nav {
-  background-color: #1a1a1a;
-}
+
 .top-bar {
   display: flex;
   justify-content: space-between;
