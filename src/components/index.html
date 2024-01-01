@@ -52,11 +52,45 @@
             </div>
           </div>
         </div>
-        <div class="eclipse-icon">
-          <div class="frame-icon">
-            <div class="c-icon"></div>
-          </div>
+        <div class="icon-container">
+            <div class="eclipse-icon">
+                <img src="Eclipse 50.png" alt="Eclipse">
+            </div>
+            <div class="frame-icon">
+                <img src="Frame 50.png" alt="letter A">
+            </div>
+            <div class="c-icon">
+                <img src="c.png" alt="letter C">
+            </div>
+            <div class="line-12">
+                <img src="Line 12.png" alt="">
+            </div>
+            <div class="line-2">
+                <img src="Line 2.png" alt="">
+            </div>
+            <div class="line-3">
+                <img src="Line 3.png" alt="">
+            </div>
+            <div class="line-4">
+                <img src="Line 4.png" alt="">
+            </div>
+            <div class="line-5">
+                <img src="Line 5.png" alt="">
+            </div>
+            <div class="line-6">
+                <img src="Line 6.png" alt="">
+            </div>
+            <div class="line-7">
+                <img src="Line 7.png" alt="">
+            </div>
+            <div class="line-8">
+                <img src="Line 8.png" alt="">
+            </div>
+            <div class="line-9">
+                <img src="Line 9.png" alt="">
+            </div>
         </div>
+        
         <div class="search-bar">
           <input type="text" placeholder="" class="search-bar-box" />
           <button class="search-btn">
@@ -258,7 +292,7 @@
         margin-top: 20px;
       }
       .user-img {
-        margin-top: -80px;
+        margin-top: -75px;
         width: 90px;
         border-radius: 50%;
         margin-right: 10px;
@@ -307,7 +341,7 @@
     flex-shrink: 0;
     border-radius: 20px;
     border: 1px solid var(--brand-gradient-gold, #ccb04c);
-    margin-left: 160px;
+    margin-left: -360px;
     margin-top: 100px;
     margin-bottom: -30px;
 }
@@ -338,6 +372,110 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.iconContainer {
+    display: flex;
+align-items: center;
+position: absolute;
+gap: 4px;
+}
+
+.eclipse-icon  {
+    position: relative;
+  width: 98px;
+  height: 98px;
+  margin-top: -88px;
+  margin-left: 430px;
+  
+  flex-shrink: 0;
+  stroke-width: 1.5px;
+  stroke: var(--brand-gradient-gold, #ccb04c);
+}
+
+.line-12{
+    position: relative;
+    margin-left: 467px;
+    margin-top: -33px;
+    left: 4px;
+}
+
+.line-2{
+    position: relative;
+    margin-left: 433px;
+    margin-top: -25px;
+}
+
+.line-3{
+    position: relative;
+    margin-left: 505px;
+    margin-top: -18px;
+}
+
+.line-4{
+    position: relative;
+    margin-left: 480px;
+    margin-top: -50px;
+}
+
+.line-5{
+    position: relative;
+    margin-left: 480px;
+    margin-top: 54px;
+}
+
+.line-6{
+    position: relative;
+    margin-left: 507px;
+    margin-top: -94px;
+}
+
+.line-7{
+    position: relative;
+    margin-left: 445px;
+    margin-top: -10px;
+    top: 55px;
+}
+
+.line-8{
+    position: relative;
+    margin-left: 448px;
+    margin-top: -13px;
+    top: -15px;
+  
+}
+
+.line-9{
+    position: relative;
+    margin-left: 507px;
+    margin-top: 31px;
+  
+}
+
+.c-icon{
+    position: relative;
+    margin-left: 471px;
+    margin-top: -70px;
+    left: 3px;
+    top: -5px;
+    color: var(--brand-brand-whiteyellow, #FFFDF0);
+    font-family: Alegreya Sans SC;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.frame-icon{
+    position: relative;
+    margin-left: 448px;
+    margin-top: -100px;
+    color: var(--brand-brand-goldenyellow, rgba(211, 172, 43, 0.76));
+    font-family: Adamina;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
       .icon {
@@ -378,6 +516,7 @@
       }
 
       .button-style {
+        width: 64px;
         color: #001840;
         border-radius: 8px;
         border: 1px solid #ffdc5f;
@@ -402,9 +541,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 16px;
-        
-        
+        gap: 16px   ;
       }
 
       .nav-bar-links .button-style {
