@@ -11,25 +11,35 @@
       <div class="side-nav">
         <p class="small-padding side-nav-category">My Links</p>
         <ul class="h-center">
-          <li class="side-nav-item"><a class="side-nav-button">My Home</a></li>
-          <li class="side-nav-item"><a class="side-nav-button">Messages</a></li>
-          <li class="side-nav-item"><a class="side-nav-button">Follows</a></li>
-          <li class="side-nav-item"><a class="side-nav-button">Friends</a></li>
+          <li class="side-nav-item"><a class="side-nav-button">My Home</a>
+            <img src="Line 14.png" alt="line">
+          </li>
+          <li class="side-nav-item"><a class="side-nav-button">Messages</a>
+            <img src="Line 14.png" alt="line"></li>
+          <li class="side-nav-item"><a class="side-nav-button">Follows</a>
+            <img src="Line 14.png" alt="line"></li>
+          <li class="side-nav-item"><a class="side-nav-button">Friends</a>
+            <img src="Line 14.png" alt="line"></li>
         </ul>
         <p class="small-padding side-nav-category">Global Links</p>
         <ul class="h-center">
           <li class="side-nav-item">
             <a class="side-nav-button">Bulletins</a>
+            <img src="Line 14.png" alt="line">
           </li>
-          <li class="side-nav-item"><a class="side-nav-button">Boards</a></li>
+          <li class="side-nav-item"><a class="side-nav-button">Boards</a>
+            <img src="Line 14.png" alt="line"></li>
         </ul>
         <p class="small-padding side-nav-category">Services</p>
         <ul class="h-center">
           <li class="side-nav-item">
             <a class="side-nav-button">Site Rules</a>
+            <img src="Line 14.png" alt="line">
           </li>
-          <li class="side-nav-item"><a class="side-nav-button">FAQ/Help</a></li>
-          <li class="side-nav-item"><a class="side-nav-button">Contact</a></li>
+          <li class="side-nav-item"><a class="side-nav-button">FAQ/Help</a>
+            <img src="Line 14.png" alt="line"></li>
+          <li class="side-nav-item"><a class="side-nav-button">Contact</a>
+            <img src="Line 14.png" alt="line"></li>
         </ul>
       </div>
     </body>
@@ -136,7 +146,7 @@
     </script>
     <style>
       html body div.side-nav ul.h-center li.side-nav-item::marker {
-        content: url(Ellipse\ 53.png);
+        content: url("Eclipse\ 53.png");
         stroke-width: 1px;
         stroke: var(--brand-gradient-teal, #8cbcbe);
         width: 20px;
@@ -147,6 +157,7 @@
         justify-content: space-around;
         margin-left: 86px;
       }
+
 
       html body div.side-nav a.side-nav-button {
         color: #001840;
@@ -160,9 +171,10 @@
         width: 229px;
         height: 633px;
         flex-shrink: 0;
+        overflow: hidden;
       }
       .side-nav-item {
-        width: 40%;
+        width: 100%;
         border-radius: 5px;
         list-style-type: initial;
         text-align: center;
@@ -171,29 +183,7 @@
         font-size: small;
       }
 
-      .side-nav-button::before {
-        content: "";
-        width: 25px;
-        height: 25px;
-        background-color: var(--main-link-color);
-        left: 25px;
-        border-radius: 50%;
-        position: absolute;
-      }
-      .side-nav-button:hover::before {
-        content: "";
-        width: 27px; /* To account for the gradient border width */
-        height: 27px; /* To account for the gradient border width */
-        background: radial-gradient(
-            circle closest-side,
-            #000 93%,
-            transparent 71%
-          ),
-          linear-gradient(135deg, hsl(291, 100%, 67%), hsl(180, 94%, 56%));
-        border-radius: 50%;
-        left: 24px; /* Adjusted to center the circle */
-        position: absolute;
-      }
+      
 
       .side-nav-button {
         font-family: Nunito Sans;
@@ -210,26 +200,15 @@
         border: 1px solid #ffdc5f;
         background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
       }
-      .side-nav-button:hover {
-        background: var(--gradientColor);
-        padding: 1rem !important;
-        width: 100% !important;
-        list-style-type: none !important;
-        background: radial-gradient(
-            50% 183.93% at 50% -83.93%,
-            #15deff 0%,
-            rgba(21, 222, 255, 0) 100%
-          ),
-          linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0) 0%,
-            transparent,
-            rgba(255, 255, 255, 0) 100%
-          ) !important;
-        background-blend-mode: normal, overlay !important;
-        background-position-y: bottom !important;
+
+.side-nav-item img,
+      .side-nav-button img{
+        margin-left: -85px;
       }
 
+      
+      
+       
       ul {
         width: 100%;
         display: flex;
@@ -261,6 +240,7 @@
         background: #000816;
         color: white;
         margin: 0;
+        overflow: hidden;
       }
       html body div.top-nav {
         width: 100%;
@@ -516,7 +496,7 @@ gap: 4px;
       }
 
       .button-style {
-        width: 64px;
+        width: 100%;
         color: #001840;
         border-radius: 8px;
         border: 1px solid #ffdc5f;
@@ -525,7 +505,7 @@ gap: 4px;
         margin: 5px;
         cursor: pointer;
         align-content: center;
-        margin: auto;
+        margin-left: auto;
       }
 
       .nav-bar {
@@ -538,9 +518,10 @@ gap: 4px;
       }
 
       .nav-bar-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       display: flex;
+width: 1153px;
+justify-content: space-between;
+align-items: center;
         gap: 16px   ;
       }
 
@@ -549,7 +530,7 @@ gap: 4px;
         width: 100px;
         height: 35px;
         padding: 4px 10px;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         text-align: center;
         flex-shrink: 0;
@@ -559,6 +540,8 @@ gap: 4px;
         background: linear-gradient(180deg, #333d51 0%, #000e26 100%);
         
       }
+
+      
 
       .breadcrumb {
         font-style: italic;
