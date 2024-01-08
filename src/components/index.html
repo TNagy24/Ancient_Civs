@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Navigation Bar</title>
+    <title>Ancient_Civ-Home Page</title>
   </head>
   
     <body>
@@ -62,43 +62,8 @@
             </div>
           </div>
         </div>
-        <div class="icon-container">
-            <div class="eclipse-icon">
-                <img src="Eclipse 50.png" alt="Eclipse">
-            </div>
-            <div class="frame-icon">
-                <img src="Frame 50.png" alt="letter A">
-            </div>
-            <div class="c-icon">
-                <img src="c.png" alt="letter C">
-            </div>
-            <div class="line-12">
-                <img src="Line 12.png" alt="">
-            </div>
-            <div class="line-2">
-                <img src="Line 2.png" alt="">
-            </div>
-            <div class="line-3">
-                <img src="Line 3.png" alt="">
-            </div>
-            <div class="line-4">
-                <img src="Line 4.png" alt="">
-            </div>
-            <div class="line-5">
-                <img src="Line 5.png" alt="">
-            </div>
-            <div class="line-6">
-                <img src="Line 6.png" alt="">
-            </div>
-            <div class="line-7">
-                <img src="Line 7.png" alt="">
-            </div>
-            <div class="line-8">
-                <img src="Line 8.png" alt="">
-            </div>
-            <div class="line-9">
-                <img src="Line 9.png" alt="">
-            </div>
+        <div class="icon">
+            <img src="Frame 51.png" alt="icon">
         </div>
         
         <div class="search-bar">
@@ -108,13 +73,26 @@
           </button>
         </div>
         <div class="notifications">
-          <div class="notif">
-            <img src="messageicon.svg" alt="User Image" class="icon" />
-            <p class="notif-count">7</p>
+          <div class="notif-1">
+            <img src="Iconex.png" alt="circle">
+            
           </div>
-          <div class="notif">
-            <img src="notificon.svg" alt="User Image" class="icon" />
-            <p class="notif-count">3</p>
+          <div class="notif-2">
+            <img src="Iconex.png" alt="circle">
+          </div>
+          <div class="message-icon">
+            <img src="message.png" alt="Message Icon">
+          </div>
+          <div class="bell-icon">
+            <img src="bellicon.png" alt="Bell icon">
+          </div>
+
+          <div class="three-icon">
+            <img src="3.png" alt="3 Icon">
+          </div>
+
+          <div class="five-icon">
+            <img src="5.png" alt="3 Icon">
           </div>
         </div>
       </div>
@@ -156,6 +134,7 @@
         display: flex;
         justify-content: space-around;
         margin-left: 86px;
+        
       }
 
 
@@ -179,32 +158,28 @@
         list-style-type: initial;
         text-align: center;
         background-color: var(--nav-background-color);
-        margin-inline: auto;
+        margin-left: 0;
         font-size: small;
+        padding-left: 20px;
       }
 
       
 
-      .side-nav-button {
-        font-family: Nunito Sans;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
       .side-nav-button {
         display: flex;
         padding: 0px 49px 0px 10px;
         align-items: center;
         border-radius: 8px;
         border: 1px solid #ffdc5f;
+        font-family: Nunito Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
         background: linear-gradient(180deg, #fffdf0 0%, #cbd0d8 100%);
       }
 
-.side-nav-item img,
-      .side-nav-button img{
-        margin-left: -85px;
-      }
+
 
       
       
@@ -250,15 +225,14 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 21px;
-        margin-left: 280px;
+        margin-left: 220px;
         margin-top: -623px;
       }
       .top-bar {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        margin-left: -20px;
+  align-items: flex-start;
+  gap: 84px;
+        
       }
 
       .user-info {
@@ -316,13 +290,13 @@
       }
 
       .search-bar {
-    width: 300px;
+    width: 442px;
     height: 56px;
     flex-shrink: 0;
     border-radius: 20px;
     border: 1px solid var(--brand-gradient-gold, #ccb04c);
-    margin-left: -360px;
-    margin-top: 100px;
+    
+    margin-top: 128px;
     margin-bottom: -30px;
 }
 
@@ -332,7 +306,8 @@
     flex-shrink: 0;
     border-radius: 20px;
     border: 1px solid var(--brand-gradient-gold, #ccb04c);
-    margin-left: 0; /* Reset the margin to 0 */
+    margin-top: -3px;
+    margin-left: -5px; /* Reset the margin to 0 */
 }
 
 .search-bar-box {
@@ -354,121 +329,21 @@
     cursor: pointer;
 }
 
-.iconContainer {
-    display: flex;
-align-items: center;
-position: absolute;
-gap: 4px;
+.icon img{
+  position: absolute;
+  right: 580px;
 }
 
-.eclipse-icon  {
-    position: relative;
-  width: 98px;
-  height: 98px;
-  margin-top: -88px;
-  margin-left: 430px;
-  
-  flex-shrink: 0;
-  stroke-width: 1.5px;
-  stroke: var(--brand-gradient-gold, #ccb04c);
+.notif-1 img{
+  display: flex;
+  margin-left: -160px;
+ 
+}
+.notif-2 img {
+  display: flex;
+  margin-left: -385px;
 }
 
-.line-12{
-    position: relative;
-    margin-left: 467px;
-    margin-top: -33px;
-    left: 4px;
-}
-
-.line-2{
-    position: relative;
-    margin-left: 433px;
-    margin-top: -25px;
-}
-
-.line-3{
-    position: relative;
-    margin-left: 505px;
-    margin-top: -18px;
-}
-
-.line-4{
-    position: relative;
-    margin-left: 480px;
-    margin-top: -50px;
-}
-
-.line-5{
-    position: relative;
-    margin-left: 480px;
-    margin-top: 54px;
-}
-
-.line-6{
-    position: relative;
-    margin-left: 507px;
-    margin-top: -94px;
-}
-
-.line-7{
-    position: relative;
-    margin-left: 445px;
-    margin-top: -10px;
-    top: 55px;
-}
-
-.line-8{
-    position: relative;
-    margin-left: 448px;
-    margin-top: -13px;
-    top: -15px;
-  
-}
-
-.line-9{
-    position: relative;
-    margin-left: 507px;
-    margin-top: 31px;
-  
-}
-
-.c-icon{
-    position: relative;
-    margin-left: 471px;
-    margin-top: -70px;
-    left: 3px;
-    top: -5px;
-    color: var(--brand-brand-whiteyellow, #FFFDF0);
-    font-family: Alegreya Sans SC;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.frame-icon{
-    position: relative;
-    margin-left: 448px;
-    margin-top: -100px;
-    color: var(--brand-brand-goldenyellow, rgba(211, 172, 43, 0.76));
-    font-family: Adamina;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-      .icon {
-        height: 35px;
-        width: 35px;
-        padding: 5px;
-        border: 1px orange solid;
-        border-radius: 50%;
-        
-      }
-      .notif {
-        display: flex;
-      }
       .notifications {
         display: flex;
         align-items: center;
@@ -477,26 +352,34 @@ gap: 4px;
         gap:60px;
       }
 
-      .notif-count {
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
+      .message-icon img{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        cursor: pointer;
+        margin-left: -434px;
       }
 
+      .bell-icon{
+        display: flex;
+        margin-left: -330px;
+      }
+
+      .three-icon {
+        display: flex;
+        margin-left: -199px;
+        margin-top: -40px;
+      }
+      
+      .five-icon{
+        display: flex;
+        margin-left: 91px;
+        margin-top: -40px;
+        
+      }
       .paddingtop1rem {
         padding-top: 1rem;
       }
 
       .button-style {
-        width: 100%;
+        width: 80%;
         color: #001840;
         border-radius: 8px;
         border: 1px solid #ffdc5f;
@@ -506,20 +389,22 @@ gap: 4px;
         cursor: pointer;
         align-content: center;
         margin-left: auto;
+        
       }
 
       .nav-bar {
+        width: 2%;
         display: flex;
         flex-direction: column;
         padding: 10px 20px;
         background: #000816;
-        margin-left: -20px;
+        margin-left: 0;
        
       }
 
       .nav-bar-links {
        display: flex;
-width: 1153px;
+       width: 118px;
 justify-content: space-between;
 align-items: center;
         gap: 16px   ;
@@ -527,7 +412,7 @@ align-items: center;
 
       .nav-bar-links .button-style {
         display: flex;
-        width: 100px;
+       
         height: 35px;
         padding: 4px 10px;
         justify-content: center;
