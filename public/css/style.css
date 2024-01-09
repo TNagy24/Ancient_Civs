@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  color: white;
-  margin: 0;
+  width: 403px;
+  height: 3448px;
+  background: var(--prusian-blue-Darker, #000816);
 }
 
 .top-bar {
