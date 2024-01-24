@@ -1,0 +1,305 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/src/components/acLogo.svg" />
+		<link rel="stylesheet" type="text/css" href="/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="/css/utility.css" />
+		<link rel="stylesheet" type="text/css" href="/css/template.css" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+    <body>
+        <div class="top-nav">
+            <div class="user-profile-container">
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <img class="burger-btn" src="src/components/topnav/burger.svg">
+                    </div>
+                </div>
+                <div class="profile-pic-box">
+                    <img class="profile-pic" src="src/components/topnav/profilePic.png">
+                </div>
+                <div class="profile-text">
+                    Welcome Guest!<br><font color="#94E8EC">Register</font> or <font color="#94E8EC">sign in</font> for full features!
+                </div>
+                <div class="signInUp-button-container">
+                    <div class="light-sign-button-border">
+                        <a href="/login" class="light-sign-button">
+                            Sign In
+                        </a>
+                    </div>
+                    <div class="light-sign-button-border">
+                        <a href="/register" class="light-sign-button">
+                            Sign Up
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+            <div class="site-buttons-container">
+                <div class="civ-buttons-container">
+                    <a class="logo-link" href="#">
+                        <img class="home-btn" src="/src/components/topnav/acLogo.svg">
+                    </a>
+                    <a class="civ-list-link" href="#">
+                        Explore our Civs!
+                    </a>
+                    <div class="civs-dropdown-container">
+                        <div class="currentCiv-text">
+                            Near Eastern
+                        </div>
+                        <img class="dropDownSquare-pic" src="src/components/topnav/dropDownSquare.svg">
+                    </div>
+                </div>
+                <div class="notifications-container">
+                    <div class="notifi-top">
+                        <a class="icon-box-left" href="#">
+                            <img class="icon" src="src/components/topnav/msg.svg">
+                        </a>
+                        <a class="icon-box-right" href="#">
+                            <img class="icon" src="src/components/topnav/bell.svg">
+                        </a>
+                    </div>
+                    <div class="notifi-bottom">
+                        <a class="icon-box-middle" href="#">
+                            <img class="icon" src="src/components/topnav/search.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        /* total page width 393px height 3445px */
+        body {
+            display: grid;
+            width: 100vw;
+            height: auto;
+            background-color: hsla(218, 100%, 4%, 1);
+        }
+        .top-nav {
+            display: grid;
+            width: 100vw;
+            height: 218px;
+            grid-template-columns: 33.3% 66.7%;
+            grid-template-rows: 100%;
+            padding: 8px;
+            
+        }
+        .dropdown {
+            grid-row: 1;
+            justify-items: start;
+            width: 100%;
+            height: auto;
+        }
+        .dropbtn {
+            width: 24px;
+            height: 24px;
+        }
+        .dropDownSquare-pic {
+            grid-column: 2;
+            aspect-ratio: 1 / 1;
+            height: 100%;
+        }
+        .light-sign-button {
+            background-image: linear-gradient(hsla(52,100%,97%,1),hsla(217,14%,82%,1));
+            color: hsla(218, 100%, 13%, 1);
+            border-radius: 8px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 90%;
+            font-weight: 600;
+            display: grid;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+            justify-items: center;
+            align-items: center;
+        }
+        .light-sign-button-border {
+            background-image: linear-gradient(to left, hsla(47,100%,69%,1),hsla(47,46%,41%,1));
+            border-radius: 8px;
+            width: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .light-link-button {
+            background-image: linear-gradient(hsla(52,100%,97%,1),hsla(217,14%,82%,1));
+            color: hsla(218, 100%, 13%, 1);
+            border-radius: 8px;
+            font-family: 'Nunito Sans', sans-serif;
+            size: 16px;
+            font-weight: 600;
+            display: grid;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+            justify-items: center;
+            align-items: center;
+            padding: 2%;
+        }
+        .light-link-button-border {
+            background-image: linear-gradient(to left, hsla(47,100%,69%,1),hsla(47,46%,41%,1));
+            border-radius: 8px;
+            width: 70%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .logo-link {
+            width: 80%;
+            height: auto;
+            display: grid;
+            justify-items: center;
+        }
+        .home-btn{
+            aspect-ratio: 1 / 1;
+            height: 100%;
+        }
+        .civ-buttons-container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-row: 1 / span 2;
+            grid-column: 1;
+            grid-template-columns: 100%;
+            grid-template-rows: 65% 15% 20%;
+            justify-items: center;
+        }
+        .currentCiv-text {
+            font-family: 'Nunito Sans', sans-serif;
+            color: hsla(217, 14%, 82%, 1);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19.1px;
+            grid-column: 1;
+            display: grid;
+        }
+        .civs-dropdown-container {
+            width: 100%;
+            height: 70%;
+            border-radius: 8px;
+            background-image: linear-gradient(hsla(220, 23%, 16%, 1), 90%, hsla(220, 23%, 26%, 1), hsla(220, 8%, 77%, 1));
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 100%;
+            padding: 1%;
+            align-items: center;
+            justify-items: center;
+            align-self: end;
+        }
+        .civ-list-link {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19.1px;
+            text-align: center;
+            color: hsla(46, 66%, 50%, 1);
+            align-self: end;
+        }
+        .profile-pic-box {
+            aspect-ratio: 1 / 1;
+            height: inherit;
+            justify-items: start;
+            grid-row: 2;
+        }
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+        }
+        .profile-text {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16.37px;
+            color: hsla(52, 100%, 97%, 1);
+            text-align: left;
+            grid-row: 3;
+        }
+        .signInUp-button-container {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            height: 100%;
+            grid-row: 4;
+            justify-items: center;
+            align-items: center;
+            padding-right: 5%;
+            padding-top: 2%;
+            gap: 2%;
+        }
+        .signIn {
+            grid-column: 1;
+            grid-row: 1;
+            height: auto;
+            width: 100%;
+        }
+        .signUp {
+            grid-column: 2;
+            grid-row: 1;
+            height: auto;
+            width: 100%;
+        }
+        .site-buttons-container {
+            display: grid;
+            /* width: 242px;
+            height: 215.59px; */
+            width: 100%;
+            height: auto;
+            grid-column: 2;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 45% 55%;
+            grid-row: 1 / span 2;
+        }
+        .user-profile-container {
+            display: grid;
+            /* width: 131px;
+            height: 171.46px; */
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 50% 20% 20%;
+            gap: 2px;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .notifications-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: repeat(2, 1fr);
+        }
+        .notifi-top {
+            display: grid;
+            grid-row: 1;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+        .notifi-bottom {
+            display: grid;
+            grid-row: 2;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+        .icon {
+
+        }
+        .icon-box {
+
+        }
+        .icon-box-left {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+        }
+        .icon-box-right {
+            grid-column: 2 / span 2;
+            grid-row: 1;
+        }
+        .icon-box-middle {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    </style>
+</html>
